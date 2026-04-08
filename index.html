@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Areopagus — Privacy-First Communication & Creator Platform</title>
+  <meta name="description" content="A privacy-first platform combining real-time communication with built-in fan support — all protected by AES-256 encryption.">
+  <meta property="og:title" content="Areopagus — Privacy-First Communication & Creator Platform">
+  <meta property="og:description" content="Community messaging, built-in fan support, and AES-256 encryption. One platform, zero surveillance.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Areopagus home">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none" aria-hidden="true">
+          <path d="M16 3L29 27H3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="16" cy="13" r="2.2" fill="currentColor" opacity="0.9"/>
+          <circle cx="11.5" cy="21.5" r="2.2" fill="currentColor" opacity="0.9"/>
+          <circle cx="20.5" cy="21.5" r="2.2" fill="currentColor" opacity="0.9"/>
+          <line x1="16" y1="15.2" x2="11.5" y2="19.3" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <line x1="16" y1="15.2" x2="20.5" y2="19.3" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <line x1="13.7" y1="21.5" x2="18.3" y2="21.5" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+        </svg>
+        <span>Areopagus</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="#audience">Who It's For</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="theme-picker" id="themePicker">
+          <button class="theme-picker-btn" aria-label="Change theme" aria-expanded="false" aria-haspopup="listbox" title="Change theme">
+            <svg class="theme-picker-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.83-.44-1.12-.29-.29-.44-.65-.44-1.13A1.64 1.64 0 0 1 14.41 16.4h2C19.45 16.4 22 13.9 22 10.83 22 6 17.5 2 12 2z"/>
+              <circle cx="8" cy="10" r="1.5" fill="var(--color-primary)" stroke="none"/>
+              <circle cx="12" cy="7" r="1.5" fill="#818CF8" stroke="none"/>
+              <circle cx="16" cy="10" r="1.5" fill="#FB7185" stroke="none"/>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="theme-chevron"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="theme-dropdown" id="themeDropdown" role="listbox" aria-label="Select theme" hidden>
+            <!-- Populated by JS -->
+          </div>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="#audience" class="mobile-nav-link">Who It's For</a>
+    <a href="#features" class="mobile-nav-link">Features</a>
+    <a href="#download" class="mobile-nav-link">Download</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- Main -->
+  <main id="main">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-overline">Introducing Areopagus</p>
+          <h1>Community without compromise.</h1>
+          <p class="hero-sub">
+            A privacy-first platform combining real-time messaging with built-in fan support — all protected by AES-256 encryption. No surveillance. No data harvesting. Just your community, on your terms.
+          </p>
+          <div class="hero-ctas">
+            <a href="#download" class="btn btn-primary">Get Early Access</a>
+            <a href="#features" class="btn btn-secondary">Explore Features</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-mockup">
+            <!-- Title bar -->
+            <div class="hm-titlebar">
+              <div class="hm-dots">
+                <span class="hm-dot" style="background:#FF5F57"></span>
+                <span class="hm-dot" style="background:#FFBD2E"></span>
+                <span class="hm-dot" style="background:#28CA41"></span>
+              </div>
+              <span class="hm-titlebar-name">Areopagus</span>
+              <div class="hm-titlebar-spacer"></div>
+            </div>
+            <!-- App body -->
+            <div class="hm-body">
+              <!-- Sidebar -->
+              <div class="hm-sidebar">
+                <div class="hm-server-list">
+                  <div class="hm-server-icon hm-server-active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  </div>
+                  <div class="hm-server-icon">M</div>
+                  <div class="hm-server-icon">C</div>
+                </div>
+                <div class="hm-channels">
+                  <div class="hm-channel-section">Community</div>
+                  <div class="hm-channel hm-channel-active">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12M4 8h8M6 12h4"/></svg>
+                    <span>general</span>
+                    <span class="hm-badge">3</span>
+                  </div>
+                  <div class="hm-channel">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12M4 8h8M6 12h4"/></svg>
+                    <span>releases</span>
+                  </div>
+                  <div class="hm-channel">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 016 0v2"/></svg>
+                    <span>vip-only</span>
+                  </div>
+                  <div class="hm-channel-section" style="margin-top:12px">Supporter tiers</div>
+                  <div class="hm-channel hm-channel-creator">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2l1.8 3.6L14 6.4l-3 2.9.7 4.1L8 11.5l-3.7 1.9.7-4.1-3-2.9 4.2-.8z"/></svg>
+                    <span>subscribers</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Main chat -->
+              <div class="hm-chat">
+                <div class="hm-chat-header">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="width:14px;height:14px;opacity:.5"><path d="M2 4h12M4 8h8M6 12h4"/></svg>
+                  <span>general</span>
+                  <span class="hm-lock-badge">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" style="width:10px;height:10px"><rect x="2" y="5" width="8" height="6" rx="1"/><path d="M4 5V4a2 2 0 014 0v1"/></svg>
+                    Encrypted
+                  </span>
+                </div>
+                <div class="hm-messages">
+                  <div class="hm-msg">
+                    <div class="hm-avatar hm-av-teal">A</div>
+                    <div class="hm-msg-body">
+                      <div class="hm-msg-meta"><span class="hm-username">alice</span><span class="hm-time">today at 2:14 PM</span></div>
+                      <div class="hm-msg-text">Just joined — honestly this is exactly what I was looking for. No ads, no tracking 🙌</div>
+                    </div>
+                  </div>
+                  <div class="hm-msg">
+                    <div class="hm-avatar hm-av-indigo">B</div>
+                    <div class="hm-msg-body">
+                      <div class="hm-msg-meta"><span class="hm-username">bob</span><span class="hm-sub-badge">Subscriber</span><span class="hm-time">2:16 PM</span></div>
+                      <div class="hm-msg-text">Welcome! The exclusive channel is worth checking out</div>
+                    </div>
+                  </div>
+                  <div class="hm-msg">
+                    <div class="hm-avatar hm-av-rose">C</div>
+                    <div class="hm-msg-body">
+                      <div class="hm-msg-meta"><span class="hm-username">carol</span><span class="hm-time">2:18 PM</span></div>
+                      <div class="hm-msg-text">Love that we keep everything in one place now</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hm-input">Message #general</div>
+              </div>
+              <!-- Members panel -->
+              <div class="hm-members">
+                <div class="hm-members-header">Online — 3</div>
+                <div class="hm-member">
+                  <div class="hm-mem-avatar hm-av-teal">A</div>
+                  <div class="hm-mem-info">
+                    <span class="hm-mem-name">alice</span>
+                    <span class="hm-mem-role">Member</span>
+                  </div>
+                </div>
+                <div class="hm-member">
+                  <div class="hm-mem-avatar hm-av-indigo">B</div>
+                  <div class="hm-mem-info">
+                    <span class="hm-mem-name">bob</span>
+                    <span class="hm-mem-role hm-role-sub">Subscriber</span>
+                  </div>
+                </div>
+                <div class="hm-member">
+                  <div class="hm-mem-avatar hm-av-rose">C</div>
+                  <div class="hm-mem-info">
+                    <span class="hm-mem-name">carol</span>
+                    <span class="hm-mem-role">Member</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== AUDIENCE ========== -->
+    <section id="audience" class="section audience">
+      <div class="container">
+        <p class="section-label fade-in">Who It's For</p>
+        <h2 class="section-title fade-in">Built for people who care about their community.</h2>
+        <p class="section-sub fade-in">
+          Whether you're building an audience, managing a community, or developing the next great integration — Areopagus is your platform.
+        </p>
+
+        <div class="audience-tabs fade-in" role="tablist" aria-label="Audience types">
+          <button class="audience-tab active" role="tab" aria-selected="true" aria-controls="panel-creators" id="tab-creators" data-tab="creators">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+            <span>Creators</span>
+          </button>
+          <button class="audience-tab" role="tab" aria-selected="false" aria-controls="panel-individuals" id="tab-individuals" data-tab="individuals">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+            <span>Individuals</span>
+          </button>
+          <button class="audience-tab" role="tab" aria-selected="false" aria-controls="panel-developers" id="tab-developers" data-tab="developers">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+            <span>Developers</span>
+          </button>
+        </div>
+
+        <div class="audience-panels">
+          <!-- Creators Panel -->
+          <div class="audience-panel active" role="tabpanel" id="panel-creators" aria-labelledby="tab-creators" data-panel="creators">
+            <div class="panel-content">
+              <div class="panel-text">
+                <h3>Your community, your livelihood</h3>
+                <p>
+                  Stop splitting yourself across Discord, Patreon, and link trees. Areopagus brings your community and your supporters into one place — with a 5% take rate that leaves more in your pocket.
+                </p>
+                <ul class="panel-details">
+                  <li>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                    <span>Subscriptions, exclusive content, and digital product sales — all native</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                    <span>5% take rate — half of what Patreon charges</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                    <span>Creator analytics and earnings dashboard</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual" aria-hidden="true">
+                <div class="panel-visual-inner panel-visual--creators">
+                  <div class="panel-stat">
+                    <span class="panel-stat-number">5%</span>
+                    <span class="panel-stat-label">Platform fee</span>
+                  </div>
+                  <div class="panel-stat">
+                    <span class="panel-stat-number">0</span>
+                    <span class="panel-stat-label">Third-party tools needed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Individuals Panel -->
+          <div class="audience-panel" role="tabpanel" id="panel-individuals" aria-labelledby="tab-individuals" data-panel="individuals" hidden>
+            <div class="panel-content">
+              <div class="panel-text">
+                <h3>Privacy by default</h3>
+                <p>
+                  No facial recognition, no ID verification, no data harvesting. Areopagus gives your community private spaces where conversations stay between members — not in a corporation's database.
+                </p>
+                <ul class="panel-details">
+                  <li>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                    <span>AES-256 encryption on every message and call</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                    <span>Zero-knowledge anonymity layer — even we can't identify you</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                    <span>No ads, no trackers, no algorithmic feeds</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual" aria-hidden="true">
+                <div class="panel-visual-inner panel-visual--individuals">
+                  <svg viewBox="0 0 120 120" fill="none" class="panel-shield-icon">
+                    <path d="M60 10L105 35V65C105 90 85 110 60 118C35 110 15 90 15 65V35L60 10Z" stroke="var(--color-primary)" stroke-width="2" opacity="0.6"/>
+                    <path d="M60 25L92 44V65C92 84 77 99 60 105C43 99 28 84 28 65V44L60 25Z" stroke="var(--color-primary)" stroke-width="1.5" opacity="0.3"/>
+                    <polyline points="45,62 55,72 78,49" stroke="var(--color-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Developers Panel -->
+          <div class="audience-panel" role="tabpanel" id="panel-developers" aria-labelledby="tab-developers" data-panel="developers" hidden>
+            <div class="panel-content">
+              <div class="panel-text">
+                <h3>An open platform</h3>
+                <p>
+                  The open-source core and plugin architecture mean you can build exactly the features your community needs. Contribute upstream, publish plugins, or fork the whole thing.
+                </p>
+                <ul class="panel-details">
+                  <li>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                    <span>Open-source skeleton under MIT license</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                    <span>Backend and frontend plugin hooks</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                    <span>Community-driven marketplace for extensions</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual" aria-hidden="true">
+                <div class="panel-visual-inner panel-visual--developers">
+                  <pre><code>// Create a plugin
+export default {
+  name: 'my-plugin',
+  version: '1.0.0',
+
+  hooks: {
+    onMessage(ctx) {
+      // your logic here
+    }
+  }
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURES ========== -->
+    <section id="features" class="section features">
+      <div class="container">
+        <p class="section-label fade-in">Core Features</p>
+        <h2 class="section-title fade-in">Built for privacy. Built for your people.</h2>
+        <p class="section-sub fade-in">
+          Every feature in Areopagus exists to give communities and creators more control — over their conversations, their content, and their data.
+        </p>
+
+        <div class="features-grid">
+          <!-- Feature 1: Privacy (hero card) -->
+          <div class="feature-card feature-hero fade-in">
+            <div>
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                <circle cx="12" cy="17" r="1.5" fill="currentColor"/>
+              </svg>
+              <h3>AES-256 encryption</h3>
+              <p>
+                AES-256 encryption protects every message, call, and file. Our anonymity layer goes further — designed so that not even the Areopagus team can identify individual users or access your data.
+              </p>
+              <div class="feature-detail">
+                <div class="feature-detail-item">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                  <span>AES-256 encryption standard</span>
+                </div>
+                <div class="feature-detail-item">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                  <span>Zero-knowledge anonymity layer</span>
+                </div>
+                <div class="feature-detail-item">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                  <span>No data harvesting or surveillance</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-visual">
+              <div class="encryption-anim" id="encryptionAnim" aria-hidden="true">
+                <!-- Animated via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 2: Creator Economy -->
+          <div class="feature-card fade-in">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+            <h3>Fan support, built in</h3>
+            <p>
+              Subscriptions, exclusive content, and digital product sales — all native to your community server. No third-party platforms, no juggling tabs. Just your work and the people who love it.
+            </p>
+            <div class="feature-detail">
+              <div class="feature-detail-item">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                <span>5% take rate — half of what Patreon charges</span>
+              </div>
+              <div class="feature-detail-item">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                <span>Creator analytics and earnings dashboard</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 3: Real-Time Comms -->
+          <div class="feature-card fade-in">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+            <h3>Real-time communication</h3>
+            <p>
+              Text, voice, video, and live streaming — all AES-256 encrypted. AI-powered noise suppression keeps calls clean. Servers and channels organize your community.
+            </p>
+            <div class="feature-detail">
+              <div class="feature-detail-item">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                <span>Servers, channels, and DMs</span>
+              </div>
+              <div class="feature-detail-item">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                <span>AI noise suppression on calls</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 4: Open & Extensible (full width) -->
+          <div class="feature-card feature-hero fade-in">
+            <div>
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+              <h3>Open and extensible</h3>
+              <p>
+                A plugin architecture with an open-source core means you can extend Areopagus however you need. Build custom features, integrate third-party tools, or choose from the community marketplace.
+              </p>
+              <div class="feature-detail">
+                <div class="feature-detail-item">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                  <span>Open-source skeleton under MIT</span>
+                </div>
+                <div class="feature-detail-item">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                  <span>Backend and frontend plugin hooks</span>
+                </div>
+                <div class="feature-detail-item">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>
+                  <span>Community-driven marketplace</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-visual">
+              <pre style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-primary); opacity: 0.7; line-height: 1.8; text-align: left;"><code>// Create a plugin
+export default {
+  name: 'my-plugin',
+  version: '1.0.0',
+
+  hooks: {
+    onMessage(ctx) {
+      // your logic here
+    },
+    onServerJoin(ctx) {
+      // welcome new members
+    }
+  }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ORGANIZATIONS ========== -->
+    <section id="organizations" class="section organizations">
+      <div class="container">
+        <p class="section-label fade-in">For Organizations</p>
+        <h2 class="section-title fade-in">Private infrastructure for teams that take security seriously.</h2>
+        <p class="section-sub fade-in">
+          Deploy Areopagus for your organization and keep every conversation, file, and call under your control.
+        </p>
+
+        <div class="org-grid">
+          <div class="org-feature fade-in">
+            <div class="org-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Self-hosted deployment</h3>
+            <p>Run Areopagus on your own infrastructure. Your data never leaves your network. Full admin control over permissions, retention policies, and compliance.</p>
+          </div>
+
+          <div class="org-feature fade-in">
+            <div class="org-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <h3>Admin dashboard</h3>
+            <p>Manage users, monitor channels, set role-based access controls, and audit communication logs — all from a centralized panel built for IT teams.</p>
+          </div>
+
+          <div class="org-feature fade-in">
+            <div class="org-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+              </svg>
+            </div>
+            <h3>SSO and compliance</h3>
+            <p>SAML/OIDC single sign-on, SCIM user provisioning, and audit-ready logging. Designed for SOC 2, HIPAA, and GDPR environments from day one.</p>
+          </div>
+
+          <div class="org-feature fade-in">
+            <div class="org-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <h3>Priority support</h3>
+            <p>Dedicated onboarding, a private support channel, and an SLA that guarantees response times. Your team gets direct access to the engineers who build the product.</p>
+          </div>
+        </div>
+
+        <div class="org-cta fade-in">
+          <a href="#contact" class="btn btn-secondary">Talk to us about your organization</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DOWNLOAD ========== -->
+    <section id="download" class="section download">
+      <div class="container">
+        <p class="section-label fade-in">Download</p>
+        <h2 class="section-title fade-in">Get Areopagus</h2>
+        <p class="section-sub fade-in">
+          Available for macOS, Windows, and Linux. Free to use — always.
+        </p>
+
+        <div class="download-content">
+          <div class="fade-in">
+            <div class="download-platforms" id="downloadPlatforms">
+              <!-- macOS -->
+              <button class="platform-btn" data-platform="macos">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                <div class="platform-info">
+                  <div class="platform-name">macOS</div>
+                  <div class="platform-req">macOS 13+</div>
+                </div>
+                <span class="platform-status">Coming soon</span>
+              </button>
+
+              <!-- Windows -->
+              <button class="platform-btn" data-platform="windows">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                </svg>
+                <div class="platform-info">
+                  <div class="platform-name">Windows</div>
+                  <div class="platform-req">Windows 10+</div>
+                </div>
+                <span class="platform-status">Coming soon</span>
+              </button>
+
+              <!-- Linux -->
+              <button class="platform-btn" data-platform="linux">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.368 1.884 1.368.39 0 .739-.134 1.107-.534.117-.134.2-.2.312-.333.126-.2.18-.395.192-.658.013-.066.013-.2.013-.268 0-.537-.086-.937-.353-1.333a.726.726 0 00-.073-.134l-.013-.013c.06-.397.06-.862-.074-1.396-.137-.54-.456-1.063-.87-1.464-.242-.237-.539-.402-.868-.537-.33-.067-.663-.267-.864-.467a3.3 3.3 0 01-.533-.8c-.16-.267-.247-.533-.373-.8-.195-.393-.523-.593-.878-.593-.086 0-.183.013-.27.04-.27.068-.47.202-.67.333-.067.046-.137.068-.21.107-.063-.04-.12-.046-.192-.046a.867.867 0 00-.27.04c-.252.066-.452.2-.663.333-.195.127-.39.2-.585.2a.991.991 0 01-.26-.033c-.067-.014-.133-.04-.2-.06a1.724 1.724 0 00-.401-.067.966.966 0 00-.267.033c-.347.093-.582.348-.747.667-.246.467-.467 1.067-.685 1.467-.198.267-.465.467-.798.6l-.465.133a.867.867 0 01-.133.013c-.063 0-.133-.013-.133-.013l-.267-.134c-.327-.134-.667-.467-.933-.8-.067-.067-.133-.2-.2-.267-.066-.067-.2-.133-.333-.133-.267 0-.533.133-.667.333-.133.134-.267.4-.267.667 0 .067 0 .133.067.267.067.133.133.267.267.4.267.267.667.467 1.067.6.267.067.533.133.8.133.133 0 .267 0 .4-.067.067 0 .133-.067.2-.067.133-.067.267-.133.333-.267.133-.133.267-.333.333-.533.067-.133.133-.333.2-.533 0-.067.067-.133.067-.2.067.067.133.067.2.067.133 0 .333-.067.467-.133"/>
+                </svg>
+                <div class="platform-info">
+                  <div class="platform-name">Linux</div>
+                  <div class="platform-req">Ubuntu 22.04+</div>
+                </div>
+                <span class="platform-status">Coming soon</span>
+              </button>
+            </div>
+
+            <!-- Version info -->
+            <div class="version-info" id="versionInfo">
+              <div class="version-label">Latest Release</div>
+              <div class="version-number" id="versionNumber">v0.1.0-alpha</div>
+              <ul class="changelog-list" id="changelogList">
+                <li>Initial alpha release</li>
+                <li>Core messaging with servers and channels</li>
+                <li>AES-256 encryption</li>
+                <li>Anonymity layer</li>
+                <li>Plugin architecture foundation</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Launch notice -->
+          <div class="waitlist-section fade-in">
+            <h3>Get notified at launch</h3>
+            <p>
+              Areopagus is in active development. Follow us on <a href="https://github.com/project-areopagus" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary)">GitHub</a> or reach out at <a href="mailto:team@areopagus.app" style="color: var(--color-primary)">team@areopagus.app</a> to stay in the loop.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <p class="section-label fade-in">Get In Touch</p>
+        <h2 class="section-title fade-in">We're building this together.</h2>
+        <p class="section-sub fade-in">
+          We're a two-person team building something we believe in. Your feedback directly shapes the product.
+        </p>
+
+        <div class="contact-cards fade-in">
+          <a href="mailto:team@areopagus.app" class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <h3>Email</h3>
+            <p class="contact-card-value">team@areopagus.app</p>
+            <p class="contact-card-desc">Bug reports, feature ideas, or just to say hello.</p>
+          </a>
+
+          <a href="https://github.com/project-areopagus" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+              </svg>
+            </div>
+            <h3>GitHub</h3>
+            <p class="contact-card-value">project-areopagus</p>
+            <p class="contact-card-desc">Open issues, contribute, or explore the codebase.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="Areopagus home">
+          <svg viewBox="0 0 32 32" width="24" height="24" fill="none" aria-hidden="true">
+            <path d="M16 3L29 27H3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="16" cy="13" r="2.2" fill="currentColor" opacity="0.9"/>
+            <circle cx="11.5" cy="21.5" r="2.2" fill="currentColor" opacity="0.9"/>
+            <circle cx="20.5" cy="21.5" r="2.2" fill="currentColor" opacity="0.9"/>
+            <line x1="16" y1="15.2" x2="11.5" y2="19.3" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="16" y1="15.2" x2="20.5" y2="19.3" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="13.7" y1="21.5" x2="18.3" y2="21.5" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          </svg>
+          <span>Areopagus</span>
+        </a>
+        <p>Privacy-first communication and creator platform.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Product</h4>
+        <ul role="list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Community</h4>
+        <ul role="list">
+          <li><a href="https://github.com/project-areopagus" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Areopagus. All rights reserved.</p>
+      <p>Built with privacy in mind.</p>
+    </div>
+  </footer>
+
+  <script>
+  // ============================================
+  //   AREOPAGUS — All JavaScript Inlined
+  // ============================================
+
+  // ---- Theme System ----
+  var AREOPAGUS_THEMES = [
+    { group: 'Areopagus', themes: [
+      { id: 'dark-default', name: 'Dark (Default)', mode: 'dark', accent: '#2DD4BF', vars: { '--color-bg':'#0D0E12','--color-surface':'#141519','--color-surface-2':'#1A1B21','--color-surface-3':'#22232B','--color-glass-bg':'rgba(20,21,25,0.6)','--color-glass-border':'rgba(255,255,255,0.07)','--color-border':'rgba(255,255,255,0.08)','--color-divider':'rgba(255,255,255,0.05)','--color-text':'#E4E4E7','--color-text-muted':'#9CA3AF','--color-text-faint':'#6B7280','--color-text-inverse':'#0D0E12','--color-primary':'#2DD4BF','--color-primary-hover':'#14B8A6','--color-primary-active':'#0D9488','--color-primary-subtle':'rgba(45,212,191,0.1)','--color-secondary':'#818CF8','--color-error':'#F87171','--color-success':'#4ADE80','--shadow-sm':'0 1px 2px rgba(0,0,0,0.3)','--shadow-md':'0 4px 16px rgba(0,0,0,0.35)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.45)','--shadow-glow':'0 0 60px rgba(45,212,191,0.08)' }},
+      { id: 'midnight', name: 'Midnight', mode: 'dark', accent: '#818CF8', vars: { '--color-bg':'#0A0A14','--color-surface':'#0E0E1A','--color-surface-2':'#151524','--color-surface-3':'#1C1C30','--color-glass-bg':'rgba(14,14,26,0.75)','--color-glass-border':'rgba(37,37,64,0.5)','--color-border':'rgba(255,255,255,0.08)','--color-divider':'rgba(255,255,255,0.05)','--color-text':'#E2E8F0','--color-text-muted':'#6B7280','--color-text-faint':'#4B5563','--color-text-inverse':'#0A0A14','--color-primary':'#818CF8','--color-primary-hover':'#6366F1','--color-primary-active':'#4F46E5','--color-primary-subtle':'rgba(129,140,248,0.1)','--color-secondary':'#2DD4BF','--color-error':'#F87171','--color-success':'#4ADE80','--shadow-sm':'0 1px 2px rgba(0,0,0,0.4)','--shadow-md':'0 4px 16px rgba(0,0,0,0.45)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.55)','--shadow-glow':'0 0 60px rgba(129,140,248,0.08)' }},
+      { id: 'amoled', name: 'AMOLED Black', mode: 'dark', accent: '#2DD4BF', vars: { '--color-bg':'#000000','--color-surface':'#050505','--color-surface-2':'#0A0A0A','--color-surface-3':'#141414','--color-glass-bg':'rgba(5,5,5,0.8)','--color-glass-border':'rgba(31,31,31,0.5)','--color-border':'rgba(255,255,255,0.06)','--color-divider':'rgba(255,255,255,0.04)','--color-text':'#FFFFFF','--color-text-muted':'#6B7280','--color-text-faint':'#4B5563','--color-text-inverse':'#000000','--color-primary':'#2DD4BF','--color-primary-hover':'#14B8A6','--color-primary-active':'#0D9488','--color-primary-subtle':'rgba(45,212,191,0.1)','--color-secondary':'#818CF8','--color-error':'#F87171','--color-success':'#4ADE80','--shadow-sm':'0 1px 2px rgba(0,0,0,0.5)','--shadow-md':'0 4px 16px rgba(0,0,0,0.6)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.7)','--shadow-glow':'0 0 60px rgba(45,212,191,0.06)' }},
+      { id: 'light', name: 'Light', mode: 'light', accent: '#0D9488', vars: { '--color-bg':'#F5F5F7','--color-surface':'#FFFFFF','--color-surface-2':'#F0F0F2','--color-surface-3':'#E8E8EC','--color-glass-bg':'rgba(255,255,255,0.65)','--color-glass-border':'rgba(0,0,0,0.08)','--color-border':'rgba(0,0,0,0.1)','--color-divider':'rgba(0,0,0,0.06)','--color-text':'#18181B','--color-text-muted':'#52525B','--color-text-faint':'#A1A1AA','--color-text-inverse':'#FAFAFA','--color-primary':'#0D9488','--color-primary-hover':'#0F766E','--color-primary-active':'#115E59','--color-primary-subtle':'rgba(13,148,136,0.08)','--color-secondary':'#6366F1','--color-error':'#DC2626','--color-success':'#16A34A','--shadow-sm':'0 1px 3px rgba(0,0,0,0.06)','--shadow-md':'0 4px 16px rgba(0,0,0,0.08)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.1)','--shadow-glow':'0 0 60px rgba(13,148,136,0.06)' }},
+      { id: 'midnight-teal', name: 'Midnight Teal', mode: 'dark', accent: '#00E5CC', vars: { '--color-bg':'#0B1214','--color-surface':'#0F1819','--color-surface-2':'#152022','--color-surface-3':'#1C2A2D','--color-glass-bg':'rgba(15,24,25,0.78)','--color-glass-border':'rgba(30,51,53,0.5)','--color-border':'rgba(255,255,255,0.07)','--color-divider':'rgba(255,255,255,0.04)','--color-text':'#E0F2F1','--color-text-muted':'#5E8A87','--color-text-faint':'#3D5E5C','--color-text-inverse':'#0B1214','--color-primary':'#00E5CC','--color-primary-hover':'#00CCB5','--color-primary-active':'#00B3A0','--color-primary-subtle':'rgba(0,229,204,0.1)','--color-secondary':'#06B6D4','--color-error':'#F87171','--color-success':'#4ADE80','--shadow-sm':'0 1px 2px rgba(0,0,0,0.4)','--shadow-md':'0 4px 16px rgba(0,0,0,0.45)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.55)','--shadow-glow':'0 0 60px rgba(0,229,204,0.08)' }},
+      { id: 'solar-flare', name: 'Solar Flare', mode: 'dark', accent: '#F59E0B', vars: { '--color-bg':'#141008','--color-surface':'#1A150C','--color-surface-2':'#231D12','--color-surface-3':'#2E261A','--color-glass-bg':'rgba(26,21,12,0.78)','--color-glass-border':'rgba(61,50,34,0.5)','--color-border':'rgba(255,255,255,0.07)','--color-divider':'rgba(255,255,255,0.04)','--color-text':'#FEF3C7','--color-text-muted':'#92713A','--color-text-faint':'#6B5228','--color-text-inverse':'#141008','--color-primary':'#F59E0B','--color-primary-hover':'#D97706','--color-primary-active':'#B45309','--color-primary-subtle':'rgba(245,158,11,0.1)','--color-secondary':'#EF4444','--color-error':'#EF4444','--color-success':'#4ADE80','--shadow-sm':'0 1px 2px rgba(0,0,0,0.4)','--shadow-md':'0 4px 16px rgba(0,0,0,0.45)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.55)','--shadow-glow':'0 0 60px rgba(245,158,11,0.08)' }},
+      { id: 'nebula', name: 'Nebula', mode: 'dark', accent: '#818CF8', vars: { '--color-bg':'#0C0A18','--color-surface':'#100E20','--color-surface-2':'#18152E','--color-surface-3':'#211D3E','--color-glass-bg':'rgba(16,14,32,0.78)','--color-glass-border':'rgba(42,37,80,0.5)','--color-border':'rgba(255,255,255,0.07)','--color-divider':'rgba(255,255,255,0.04)','--color-text':'#E8E0FF','--color-text-muted':'#7B6FA0','--color-text-faint':'#564D73','--color-text-inverse':'#0C0A18','--color-primary':'#818CF8','--color-primary-hover':'#6366F1','--color-primary-active':'#4F46E5','--color-primary-subtle':'rgba(129,140,248,0.1)','--color-secondary':'#A78BFA','--color-error':'#F87171','--color-success':'#4ADE80','--shadow-sm':'0 1px 2px rgba(0,0,0,0.4)','--shadow-md':'0 4px 16px rgba(0,0,0,0.45)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.55)','--shadow-glow':'0 0 60px rgba(129,140,248,0.08)' }},
+      { id: 'rose-quartz', name: 'Rose Quartz', mode: 'dark', accent: '#FB7185', vars: { '--color-bg':'#14090E','--color-surface':'#1A0F14','--color-surface-2':'#24151C','--color-surface-3':'#2E1D26','--color-glass-bg':'rgba(26,15,20,0.78)','--color-glass-border':'rgba(59,34,48,0.5)','--color-border':'rgba(255,255,255,0.07)','--color-divider':'rgba(255,255,255,0.04)','--color-text':'#FDE8EE','--color-text-muted':'#8B5A6A','--color-text-faint':'#6B3D4E','--color-text-inverse':'#14090E','--color-primary':'#FB7185','--color-primary-hover':'#F43F5E','--color-primary-active':'#E11D48','--color-primary-subtle':'rgba(251,113,133,0.1)','--color-secondary':'#F9A8D4','--color-error':'#F87171','--color-success':'#4ADE80','--shadow-sm':'0 1px 2px rgba(0,0,0,0.4)','--shadow-md':'0 4px 16px rgba(0,0,0,0.45)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.55)','--shadow-glow':'0 0 60px rgba(251,113,133,0.08)' }},
+    ]},
+    { group: 'Mars Hill', themes: [
+      { id: 'mars-hill-dark', name: 'Mars Hill', mode: 'dark', accent: '#C2692A', vars: { '--color-bg':'#18150F','--color-surface':'#211D15','--color-surface-2':'#2A2520','--color-surface-3':'#342E27','--color-glass-bg':'rgba(24,21,15,0.78)','--color-glass-border':'rgba(194,105,42,0.12)','--color-border':'rgba(194,105,42,0.14)','--color-divider':'rgba(194,105,42,0.08)','--color-text':'#EDE3D3','--color-text-muted':'#A89880','--color-text-faint':'#6B5D4E','--color-text-inverse':'#18150F','--color-primary':'#C2692A','--color-primary-hover':'#D4813F','--color-primary-active':'#A85A22','--color-primary-subtle':'rgba(194,105,42,0.12)','--color-secondary':'#7A9EAF','--color-error':'#B84A3A','--color-success':'#6B9E5E','--shadow-sm':'0 1px 2px rgba(0,0,0,0.4)','--shadow-md':'0 4px 16px rgba(0,0,0,0.45)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.55)','--shadow-glow':'0 0 60px rgba(194,105,42,0.08)' }},
+      { id: 'mars-hill-light', name: 'Mars Hill Light', mode: 'light', accent: '#9E3F1A', vars: { '--color-bg':'#F5F0E8','--color-surface':'#F9F6F0','--color-surface-2':'#EDE5D6','--color-surface-3':'#E8DFD0','--color-glass-bg':'rgba(245,240,232,0.82)','--color-glass-border':'rgba(28,23,18,0.10)','--color-border':'rgba(28,23,18,0.12)','--color-divider':'rgba(28,23,18,0.06)','--color-text':'#1C1712','--color-text-muted':'#4A3E32','--color-text-faint':'#8C7A68','--color-text-inverse':'#F5F0E8','--color-primary':'#9E3F1A','--color-primary-hover':'#B54E25','--color-primary-active':'#7E3215','--color-primary-subtle':'rgba(158,63,26,0.1)','--color-secondary':'#3E6E7A','--color-error':'#8B2516','--color-success':'#3A6B2E','--shadow-sm':'0 1px 3px rgba(0,0,0,0.06)','--shadow-md':'0 4px 16px rgba(0,0,0,0.08)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.1)','--shadow-glow':'0 0 60px rgba(158,63,26,0.06)' }},
+    ]},
+    { group: 'Corporate', themes: [
+      { id: 'slate-professional', name: 'Slate Professional', mode: 'dark', accent: '#3B82F6', vars: { '--color-bg':'#0F1117','--color-surface':'#13151D','--color-surface-2':'#1A1D28','--color-surface-3':'#232735','--color-glass-bg':'rgba(19,21,29,0.8)','--color-glass-border':'rgba(45,51,72,0.5)','--color-border':'rgba(255,255,255,0.06)','--color-divider':'rgba(255,255,255,0.04)','--color-text':'#E2E8F0','--color-text-muted':'#64748B','--color-text-faint':'#475569','--color-text-inverse':'#0F1117','--color-primary':'#3B82F6','--color-primary-hover':'#2563EB','--color-primary-active':'#1D4ED8','--color-primary-subtle':'rgba(59,130,246,0.1)','--color-secondary':'#60A5FA','--color-error':'#F87171','--color-success':'#4ADE80','--shadow-sm':'0 1px 2px rgba(0,0,0,0.35)','--shadow-md':'0 4px 16px rgba(0,0,0,0.4)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.5)','--shadow-glow':'0 0 60px rgba(59,130,246,0.06)' }},
+      { id: 'executive-light', name: 'Executive Light', mode: 'light', accent: '#1E3A8A', vars: { '--color-bg':'#F5F7FA','--color-surface':'#FFFFFF','--color-surface-2':'#EEF1F6','--color-surface-3':'#E1E5ED','--color-glass-bg':'rgba(238,241,246,0.78)','--color-glass-border':'rgba(201,207,217,0.5)','--color-border':'rgba(0,0,0,0.08)','--color-divider':'rgba(0,0,0,0.05)','--color-text':'#111827','--color-text-muted':'#6B7280','--color-text-faint':'#9CA3AF','--color-text-inverse':'#F5F7FA','--color-primary':'#1E3A8A','--color-primary-hover':'#1E40AF','--color-primary-active':'#1D4ED8','--color-primary-subtle':'rgba(30,58,138,0.08)','--color-secondary':'#3B82F6','--color-error':'#DC2626','--color-success':'#16A34A','--shadow-sm':'0 1px 3px rgba(0,0,0,0.06)','--shadow-md':'0 4px 16px rgba(0,0,0,0.08)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.1)','--shadow-glow':'0 0 60px rgba(30,58,138,0.04)' }},
+    ]},
+    { group: 'Homecoming', themes: [
+      { id: 'blurple-dark', name: 'Blurple Dark', mode: 'dark', accent: '#5865F2', vars: { '--color-bg':'#313338','--color-surface':'#2B2D31','--color-surface-2':'#383A40','--color-surface-3':'#404249','--color-glass-bg':'rgba(43,45,49,0.78)','--color-glass-border':'rgba(63,65,71,0.5)','--color-border':'rgba(255,255,255,0.06)','--color-divider':'rgba(255,255,255,0.04)','--color-text':'#F2F3F5','--color-text-muted':'#949BA4','--color-text-faint':'#6D6F78','--color-text-inverse':'#313338','--color-primary':'#5865F2','--color-primary-hover':'#4752C4','--color-primary-active':'#3C45A5','--color-primary-subtle':'rgba(88,101,242,0.1)','--color-secondary':'#7289DA','--color-error':'#F87171','--color-success':'#4ADE80','--shadow-sm':'0 1px 2px rgba(0,0,0,0.2)','--shadow-md':'0 4px 16px rgba(0,0,0,0.25)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.35)','--shadow-glow':'0 0 60px rgba(88,101,242,0.06)' }},
+      { id: 'discord-light', name: 'Discord Light', mode: 'light', accent: '#5865F2', vars: { '--color-bg':'#FFFFFF','--color-surface':'#F2F3F5','--color-surface-2':'#EBEDEF','--color-surface-3':'#E3E5E8','--color-glass-bg':'rgba(242,243,245,0.78)','--color-glass-border':'rgba(212,215,220,0.5)','--color-border':'rgba(0,0,0,0.08)','--color-divider':'rgba(0,0,0,0.05)','--color-text':'#060607','--color-text-muted':'#5C5E66','--color-text-faint':'#949BA4','--color-text-inverse':'#FFFFFF','--color-primary':'#5865F2','--color-primary-hover':'#4752C4','--color-primary-active':'#3C45A5','--color-primary-subtle':'rgba(88,101,242,0.08)','--color-secondary':'#7289DA','--color-error':'#DC2626','--color-success':'#16A34A','--shadow-sm':'0 1px 3px rgba(0,0,0,0.06)','--shadow-md':'0 4px 16px rgba(0,0,0,0.08)','--shadow-lg':'0 12px 40px rgba(0,0,0,0.1)','--shadow-glow':'0 0 60px rgba(88,101,242,0.04)' }},
+    ]},
+  ];
+
+  // ---- Theme Picker ----
+  (function(){
+    var picker = document.getElementById('themePicker');
+    if (!picker) return;
+    var btn = picker.querySelector('.theme-picker-btn');
+    var dropdown = document.getElementById('themeDropdown');
+    var root = document.documentElement;
+    if (!btn || !dropdown) return;
+
+    var allThemes = [];
+    AREOPAGUS_THEMES.forEach(function(g){ g.themes.forEach(function(t){ allThemes.push(t); }); });
+
+    // Build dropdown
+    var html = '';
+    AREOPAGUS_THEMES.forEach(function(group){
+      html += '<div class="theme-group-label">' + group.group + '</div>';
+      group.themes.forEach(function(t){
+        html += '<button class="theme-option" role="option" data-theme-id="' + t.id + '">' +
+          '<span class="theme-option-dot" style="background:' + t.accent + '"></span>' +
+          '<span class="theme-option-name">' + t.name + '</span>' +
+          '<svg class="theme-option-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 8 6 12 14 4"/></svg>' +
+          '</button>';
+      });
+    });
+    dropdown.innerHTML = html;
+
+    // Apply theme
+    function applyTheme(theme) {
+      root.setAttribute('data-theme', theme.mode);
+      var keys = Object.keys(theme.vars);
+      for (var i = 0; i < keys.length; i++) {
+        root.style.setProperty(keys[i], theme.vars[keys[i]]);
+      }
+      var icon = picker.querySelector('.theme-picker-icon');
+      if (icon) { var dot = icon.querySelector('circle'); if (dot) dot.setAttribute('fill', theme.accent); }
+      dropdown.querySelectorAll('.theme-option').forEach(function(opt){
+        var isActive = opt.getAttribute('data-theme-id') === theme.id;
+        if (isActive) opt.classList.add('active'); else opt.classList.remove('active');
+        opt.setAttribute('aria-selected', isActive);
+      });
+    }
+
+    // Load default
+    applyTheme(allThemes[0]);
+
+    // Toggle dropdown
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = dropdown.hidden === false;
+      dropdown.hidden = isOpen;
+      picker.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Select theme
+    dropdown.addEventListener('click', function(e){
+      var opt = e.target;
+      while (opt && !opt.classList.contains('theme-option')) { opt = opt.parentElement; }
+      if (!opt) return;
+      var tid = opt.getAttribute('data-theme-id');
+      for (var i = 0; i < allThemes.length; i++) {
+        if (allThemes[i].id === tid) { applyTheme(allThemes[i]); break; }
+      }
+      dropdown.hidden = true;
+      picker.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function(e){
+      if (!picker.contains(e.target)) {
+        dropdown.hidden = true;
+        picker.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+
+  // ---- Mobile Menu ----
+  (function(){
+    var btn = document.querySelector('.mobile-menu-btn');
+    var nav = document.getElementById('mobileNav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+      nav.setAttribute('aria-hidden', String(!isOpen));
+      btn.innerHTML = isOpen
+        ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>'
+        : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>';
+    });
+    nav.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        nav.setAttribute('aria-hidden', 'true');
+        btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>';
+      });
+    });
+  })();
+
+  // ---- Sticky Header ----
+  (function(){
+    var header = document.getElementById('header');
+    if (!header) return;
+    var lastScroll = 0;
+    window.addEventListener('scroll', function(){
+      var s = window.scrollY;
+      if (s > 80) header.classList.add('header--scrolled'); else header.classList.remove('header--scrolled');
+      if (s > lastScroll && s > 200) header.classList.add('header--hidden'); else header.classList.remove('header--hidden');
+      lastScroll = s;
+    }, { passive: true });
+  })();
+
+  // ---- Audience Tabs ----
+  (function(){
+    var tabs = document.querySelectorAll('.audience-tab');
+    var panels = document.querySelectorAll('.audience-panel');
+    if (!tabs.length || !panels.length) return;
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        var target = tab.getAttribute('data-tab');
+        tabs.forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+        tab.classList.add('active'); tab.setAttribute('aria-selected','true');
+        panels.forEach(function(p){
+          if (p.getAttribute('data-panel') === target) { p.classList.add('active'); p.removeAttribute('hidden'); }
+          else { p.classList.remove('active'); p.setAttribute('hidden',''); }
+        });
+      });
+    });
+  })();
+
+  // ---- Scroll Reveal ----
+  (function(){
+    try {
+      if (CSS.supports && CSS.supports('animation-timeline','scroll()')) return;
+    } catch(e) {}
+    var els = document.querySelectorAll('.fade-in');
+    if (!els.length) return;
+    els.forEach(function(el){ el.classList.remove('fade-in'); el.classList.add('fade-in-js'); });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in-js').forEach(function(el){ observer.observe(el); });
+  })();
+
+  // ---- Encryption Animation ----
+  (function(){
+    var container = document.getElementById('encryptionAnim');
+    if (!container) return;
+    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+    function render() {
+      var html = '';
+      for (var i = 0; i < 8; i++) { var line=''; for(var j=0;j<32;j++) line+=chars[Math.floor(Math.random()*chars.length)]; html+=line+'\n'; }
+      container.textContent = html;
+    }
+    render(); setInterval(render, 150);
+  })();
+
+  // ---- Smooth Scroll ----
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+    anchor.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+  </script>
+</body>
+</html>
