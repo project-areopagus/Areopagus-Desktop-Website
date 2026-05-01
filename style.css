@@ -83,6 +83,9 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.45);
   --shadow-glow: 0 0 60px rgba(45, 212, 191, 0.08);
+  --bloom-1: rgba(45, 212, 191, 0.12);
+  --bloom-2: rgba(129, 140, 248, 0.07);
+  --bloom-3: rgba(45, 212, 191, 0.05);
 }
 
 /* ---- Light Mode ---- */
@@ -115,6 +118,9 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
   --shadow-glow: 0 0 60px rgba(13, 148, 136, 0.06);
+  --bloom-1: rgba(13, 148, 136, 0.08);
+  --bloom-2: rgba(99, 102, 241, 0.05);
+  --bloom-3: rgba(13, 148, 136, 0.04);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -416,16 +422,9 @@
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 15% 45%, rgba(45, 212, 191, 0.12), transparent),
-    radial-gradient(ellipse 60% 50% at 75% 60%, rgba(129, 140, 248, 0.07), transparent),
-    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(45, 212, 191, 0.05), transparent),
-    var(--color-bg);
-}
-[data-theme='light'] .hero-bg {
-  background:
-    radial-gradient(ellipse 80% 60% at 15% 45%, rgba(13, 148, 136, 0.08), transparent),
-    radial-gradient(ellipse 60% 50% at 75% 60%, rgba(99, 102, 241, 0.05), transparent),
-    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(13, 148, 136, 0.04), transparent),
+    radial-gradient(ellipse 80% 60% at 15% 45%, var(--bloom-1), transparent),
+    radial-gradient(ellipse 60% 50% at 75% 60%, var(--bloom-2), transparent),
+    radial-gradient(ellipse 50% 40% at 50% 100%, var(--bloom-3), transparent),
     var(--color-bg);
 }
 
